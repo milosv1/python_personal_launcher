@@ -23,5 +23,9 @@ elif website_selectInput == '2':
     #open using webbrowser.open() ..
     webbrowser.open("http://www.google.com")
     #else if user inputs anything else - show they can only use 1 or 2
+elif website_selectInput == 'q' or website_selectInput == 'Q':
+    #if input is lowercase q or uppercase q - quite the launcher
+     print("Quitting Launcher")
+     exit    
 else:
     print("input can only be 1 OR 2")     
