@@ -13,6 +13,10 @@ command_list = []
 #get input from user through prompt
 website_selectInput = input("1 for YouTube \n 2 for Google")
 
+#add into list of commands recently ued
+command_list.append(website_selectInput)
+print("commands used:", command_list)
+
 #if the user enters 1
 if website_selectInput == '1':
     #show desktop notification - of said opening website
