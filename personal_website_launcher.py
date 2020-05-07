@@ -6,12 +6,13 @@ from win10toast import ToastNotifier
 #create website launcher notifiers from win10toast library
 youtube_ToastNotification = ToastNotifier()
 google_ToastNotification = ToastNotifier()
+facebook_ToastNotification = ToastNotifier()
 
 #commands recently used
 command_list = []
 
 #get input from user through prompt
-website_selectInput = input("1 for YouTube \n 2 for Google")
+website_selectInput = input("1 for YouTube \n 2 for Google \n 3 for FaceBook")
 
 #add into list of commands recently ued
 command_list.append(website_selectInput)
@@ -30,9 +31,14 @@ elif website_selectInput == '2':
     #open using webbrowser.open() ..
     webbrowser.open("http://www.google.com")
     #else if user inputs anything else - show they can only use 1 or 2
+elif website_selectInput == '3':
+    #notify User of selection    
+    facebook_ToastNotification.show_toast("Opening FaceBook", f"{website_selectInput} FaceBook Selected - Opening FaceBook")
+    #open facebook website
+    webbrowser.open("http://www.facebook.com")
 elif website_selectInput == 'q' or website_selectInput == 'Q':
     #if input is lowercase q or uppercase q - quite the launcher
      print("Quitting Launcher")
      exit    
 else:
-    print("input can only be 1 OR 2")     
+    print("input can only be 1 OR 2 OR 3")     
