@@ -7,6 +7,9 @@ from win10toast import ToastNotifier
 youtube_ToastNotification = ToastNotifier()
 google_ToastNotification = ToastNotifier()
 
+#commands recently used
+command_list = []
+
 #get input from user through prompt
 website_selectInput = input("1 for YouTube \n 2 for Google")
 
