@@ -8,15 +8,8 @@ youtube_ToastNotification = ToastNotifier()
 google_ToastNotification = ToastNotifier()
 facebook_ToastNotification = ToastNotifier()
 
-#commands recently used
-command_list = []
-
 #get input from user through prompt
 website_selectInput = input("1 for YouTube \n 2 for Google \n 3 for FaceBook")
-
-#add into list of commands recently ued
-command_list.append(website_selectInput)
-print("commands used:", command_list)
 
 #if the user enters 1
 if website_selectInput == '1':
