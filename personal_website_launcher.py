@@ -8,6 +8,12 @@ youtube_ToastNotification = ToastNotifier()
 google_ToastNotification = ToastNotifier()
 facebook_ToastNotification = ToastNotifier()
 
+#will also be adding desktop application launcher alongside this as a different selection to website launcher
+DISCORD_PATH = ".." #add the path here soon
+STEAM_PATH = ".."  #also add path here
+CHROME_PATH = ".." #add chrome
+BRAVE_PATH = ".." #add brave browser path
+
 #get input from user through prompt
 website_selectInput = input("1 for YouTube \n 2 for Google \n 3 for FaceBook")
 
