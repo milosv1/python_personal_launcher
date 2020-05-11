@@ -58,7 +58,7 @@ if select_lancher == 'w' or select_lancher == 'W':
         #in the case that lowercase q or uppercase Q are entered, quit the program.
    elif launcher_selectInput == 'q' or launcher_selectInput == 'Q':
        #show this print message, then exit.
-       print("closing")
+       print("closing website launcher")
        exit
  #in the case that the user selects lowercase d or uppercase D, allow them to open desktop applications.      
 if select_lancher == 'd' or select_lancher == 'D':
