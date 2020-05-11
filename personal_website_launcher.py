@@ -33,6 +33,8 @@ if select_lancher == 'w' or select_lancher == 'W':
        #user enters 1 - show windows notification on their Desktop
        #add icon for youtube
         youtube_ToastNotification.show_toast("Opening YouTube", f"{launcher_selectInput} YouTube Selected - Opening YouTube", icon_path=YOUTUBE_ICON)
+        #show print msg
+        print(f"'{launcher_selectInput}' selected, Opening Youtube.")
         #open youtube on browser
         webbrowser.open("http://www.youtube.com")
         #if input is 2
