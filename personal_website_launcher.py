@@ -40,8 +40,10 @@ if select_lancher == 'w' or select_lancher == 'W':
         #if input is 2
    elif launcher_selectInput == '2':
        #open google - show desktop notification
-       #add icon fo google
+       #add icon for google
         google_ToastNotification.show_toast("Opening Google", f"{launcher_selectInput} Google Selected - Opening Google", icon_path=GOOGLE_ICON)
+        #show print msg that google has been selected and will be open
+        print(f"'{launcher_selectInput}' Google selected, Opening Google")
         #open Google on their browser
         webbrowser.open("http://www.google.com")
         #if 3 is entered
@@ -49,6 +51,8 @@ if select_lancher == 'w' or select_lancher == 'W':
        #show desktop notification that facebook will be open - and that, that is their input of choice
        #add icon for facebook
         facebook_ToastNotification.show_toast("Opening FaceBook", f"{launcher_selectInput} FaceBook Selected - Opening FaceBook", icon_path=FACEBOOK_ICON)    
+        #show print that facebook was selected and that it will launch
+        print(f"'{launcher_selectInput}' FaceBook selected, Opening Google")
         #open FaceBook on their browser
         webbrowser.open("http://www.facebook.com")
         #in the case that lowercase q or uppercase Q are entered, quit the program.
