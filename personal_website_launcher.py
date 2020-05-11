@@ -52,7 +52,7 @@ if select_lancher == 'w' or select_lancher == 'W':
        #add icon for facebook
         facebook_ToastNotification.show_toast("Opening FaceBook", f"{launcher_selectInput} FaceBook Selected - Opening FaceBook", icon_path=FACEBOOK_ICON)    
         #show print that facebook was selected and that it will launch
-        print(f"'{launcher_selectInput}' FaceBook selected, Opening Google")
+        print(f"'{launcher_selectInput}' FaceBook selected, Opening FaceBook")
         #open FaceBook on their browser
         webbrowser.open("http://www.facebook.com")
         #in the case that lowercase q or uppercase Q are entered, quit the program.
