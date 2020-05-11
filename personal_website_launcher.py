@@ -77,7 +77,7 @@ if select_lancher == 'd' or select_lancher == 'D':
         print("this is meant to open Brave")         
     elif desktop_select == 'qd' or desktop_select == 'QD':
         #if lowercase and uppercase qd are entered meaning quick desktop application
-        print("closing")
+        print("closing desktop application launcher")
         #show closing message and exit program.
         exit
 
