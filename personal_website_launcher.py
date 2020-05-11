@@ -21,7 +21,7 @@ BRAVE_PATH = ".." #add brave browser path
 # 'r' is raw string to get path
 GOOGLE_ICON = r"google_icon.ico"
 YOUTUBE_ICON = r"youtube_icon.ico"
-FACEBOOK_ICON = r"google_icon.ico"
+FACEBOOK_ICON = r"facebook_icon.ico"
 
 #get input from user through prompt
 select_lancher = input("d for DESKTOP APPLICATIONS or w for WEBSITES")
@@ -31,19 +31,22 @@ if select_lancher == 'w' or select_lancher == 'W':
    launcher_selectInput = input("1 for YouTube \n 2 for Google \n 3 for FaceBook")
    if launcher_selectInput == '1':
        #user enters 1 - show windows notification on their Desktop
-        youtube_ToastNotification.show_toast("Opening YouTube", f"{launcher_selectInput} YouTube Selected - Opening YouTube")
+       #add icon for youtube
+        youtube_ToastNotification.show_toast("Opening YouTube", f"{launcher_selectInput} YouTube Selected - Opening YouTube", icon_path=YOUTUBE_ICON)
         #open youtube on browser
         webbrowser.open("http://www.youtube.com")
         #if input is 2
    elif launcher_selectInput == '2':
        #open google - show desktop notification
-        google_ToastNotification.show_toast("Opening Google", f"{launcher_selectInput} Google Selected - Opening Google")
+       #add icon fo google
+        google_ToastNotification.show_toast("Opening Google", f"{launcher_selectInput} Google Selected - Opening Google", icon_path=GOOGLE_ICON)
         #open Google on their browser
         webbrowser.open("http://www.google.com")
         #if 3 is entered
    elif launcher_selectInput == '3':
        #show desktop notification that facebook will be open - and that, that is their input of choice
-        facebook_ToastNotification.show_toast("Opening FaceBook", f"{launcher_selectInput} FaceBook Selected - Opening FaceBook")    
+       #add icon for facebook
+        facebook_ToastNotification.show_toast("Opening FaceBook", f"{launcher_selectInput} FaceBook Selected - Opening FaceBook", icon_path=FACEBOOK_ICON)    
         #open FaceBook on their browser
         webbrowser.open("http://www.facebook.com")
         #in the case that lowercase q or uppercase Q are entered, quit the program.
