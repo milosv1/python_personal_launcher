@@ -17,6 +17,11 @@ STEAM_PATH = ".."  #also add path here
 CHROME_PATH = ".." #add chrome path
 BRAVE_PATH = ".." #add brave browser path
 
+#icon for notificaations
+GOOGLE_ICON = "google_icon.png"
+YOUTUBE_ICON = "youtube_icon.png"
+FACEBOOK_ICON = "google_icon.png"
+
 #get input from user through prompt
 select_lancher = input("d for DESKTOP APPLICATIONS or w for WEBSITES")
 # if lowercase w or uppercase W is selected...
