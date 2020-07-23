@@ -5,6 +5,7 @@ from win10toast import ToastNotifier
 import os #we will need this to launch our d/a 
 import subprocess #launch d/a
 import sys
+import argparse
 
 #create website launcher notifiers from win10toast library
 youtube_ToastNotification = ToastNotifier()
@@ -23,8 +24,30 @@ GOOGLE_ICON = r"google_icon.ico"
 YOUTUBE_ICON = r"youtube_icon.ico"
 FACEBOOK_ICON = r"facebook_icon.ico"
 
-#get input from user through prompt
-select_lancher = input("d for DESKTOP APPLICATIONS or w for WEBSITES")
+website_launcher = ""
+def get_args(website_launcher):
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--youtube", help="Usage: --youtube youtube, --facebook facebook, --google google")
+    parser.add_argument("--facebook")
+    parser.add_argument("--google")
+    args = parser.parse_args()
+    if args.youtube:
+        youtube_ToastNotification.show_toast(f"Opening {args.youtube}",icon_path=YOUTUBE_ICON)
+        #webbrowser.open("http://youtube.com",new=2)
+    elif args.facebook:
+        facebook_ToastNotification.show_toast(f"Opening {args.facebook}",icon_path=FACEBOOK_ICON)
+        #webbrowser.open("http://facebook.com",new=2)
+    elif args.google:
+        google_ToastNotification.show_toast(f"Opening {args.google}",icon_path=GOOGLE_ICON)
+       # webbrowser.open("http://google.com",new=2)
+    else:
+        print("Please see usage in arg parse")         
+
+
+
+
+get_args(website_launcher)          
+"""
 # if lowercase w or uppercase W is selected...
 if select_lancher == 'w' or select_lancher == 'W':
     #we allow the user to only launch websites
@@ -80,7 +103,7 @@ if select_lancher == 'd' or select_lancher == 'D':
         print("closing desktop application launcher")
         #show closing message and exit program.
         exit
-
+"""
 
 
 
